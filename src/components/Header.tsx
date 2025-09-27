@@ -46,7 +46,7 @@ export default function Header() {
       ${scrollY > windowHeight-64 ? 'bg-black' : ''}
       `}>
       <div className={`
-          absolute flex flex-col max-w-1/2 transition-all duration-300 ease-in
+          absolute flex justify-center flex-col max-w-1/2 transition-all duration-300 ease-in
           ${scrollY > 0 ? 'left-4 top-2 mr-4' : 'left-1/2 top-[50vh] -translate-x-1/2 -translate-y-1/2'}
         `}>
         <Image
@@ -61,8 +61,7 @@ export default function Header() {
         <div className={`absolute top-full text-center transition-opacity 
           ${ready ? '' : 'hidden'}
           ${scrollY > 0 ? 'opacity-0' : 'opacity-100'}`}>
-          <p className="font-[600] text-base sm:text-xl">ПРИНИМАЮЩАЯ СТОРОНА И</p>
-          <p className="font-[600] text-base sm:text-xl">ВДОХНОВЛЯЮЩИЕ ПУТЕШЕСТВИЯ НА БАЛИ</p>
+          <p className="font-[600] text-base sm:text-xl">ПРИНИМАЮЩАЯ СТОРОНА И ВДОХНОВЛЯЮЩИЕ ПУТЕШЕСТВИЯ НА БАЛИ</p>
         </div>
       </div>
 
