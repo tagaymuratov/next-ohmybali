@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --color-hover: black;
+  --color-primary: #787143;
+  --color-secondary: ivory;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-montserrat), sans-serif;
+  color: black;
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-lora), serif;
+}
+
+section{
+  width: 100%;
+}
