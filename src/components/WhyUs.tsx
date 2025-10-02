@@ -1,32 +1,29 @@
 import Image from "next/image";
-import img from '@/assets/imgs/whyus.jpg'
+import { urlFor } from "@/sanity/lib/image";
+import { PortableText } from "next-sanity";
 
-function WhyUs(){
+type ChildProps = {
+  id: string,
+  img: any,
+  body: any,
+}
+
+function WhyUs({ id, img, body }: ChildProps){
   return(
     <section id='whyUs' className="bg-(--color-primary)/90">
       <div className="container max-w-7xl mx-auto py-16 px-16">
         <div className="flex items-stretch flex-col gap-8 md:flex-row">
           <div className="flex-1 relative min-h-80">
             <Image
-              src={img}
-              alt=""
+              src={urlFor(img).url()}
+              alt={img.alt || id}
               fill
               className="object-cover rounded-2xl"
             />
           </div>
           <div className="flex-1 py-4">
-            <h1 className="text-3xl">Почему мы? - Наш подход</h1>
-            <br />
-            <ul>
-              <li>• работаем как официальная принимающая сторона на бали</li>
-              <li>• юридические лица в казахстане, россии и индонезии</li>
-              <li>• команда на месте: локальные контакты и экспертиза</li>
-              <li>• коммуникация на русском и английском языках</li>
-              <li>• понимаем задачи агентств и ожидания клиентов</li>
-              <li>• быстро реагируем и предоставляем решения «под ключ»</li>
-            </ul>
-            <br />
-            <i className="text-lg">Мы соединяем локальные возможности и привычный для партнёров уровень сервиса.</i>
+            <h1 className="text-3xl">{id}</h1>
+            {Array.isArray(body) && <PortableText value={body} />}
           </div>
         </div>
       </div>

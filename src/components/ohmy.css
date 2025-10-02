@@ -1,0 +1,27 @@
+.ohmy{
+  p {
+    margin-bottom: 1rem;
+  }
+
+  li {
+    margin-left: 1.5rem;
+    list-style-type: disc;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: black;
+      left: 0;
+      bottom: -0.5rem;
+    }
+  }
+}
