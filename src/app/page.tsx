@@ -1,5 +1,5 @@
 import { type SanityDocument } from "next-sanity";
-import { client, urlFor } from "@/sanity/lib/client";
+import { client } from "@/sanity/lib/client";
 
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
